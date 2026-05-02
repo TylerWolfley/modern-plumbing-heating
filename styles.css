@@ -13,8 +13,8 @@
   --copper-dark: #8f4f2a;
   --gold: #d5a45f;
   --sage: #72806f;
-  --shadow: 0 18px 54px rgba(15, 20, 28, 0.16);
-  --shadow-soft: 0 12px 34px rgba(15, 20, 28, 0.09);
+  --shadow: 0 12px 34px rgba(15, 20, 28, 0.13);
+  --shadow-soft: 0 8px 22px rgba(15, 20, 28, 0.08);
   --radius: 8px;
   --max: 1160px;
 }
@@ -69,9 +69,9 @@ svg {
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   width: 100%;
-  padding: 12px clamp(16px, 3vw, 36px);
+  padding: 5px clamp(16px, 3vw, 32px);
   color: var(--white);
   background: rgba(15, 20, 28, 0.91);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -82,32 +82,14 @@ svg {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   min-width: 0;
   border-radius: 8px;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  flex: 0 0 38px;
-  width: 38px;
-  height: 38px;
-  color: var(--deep);
-  background: linear-gradient(135deg, var(--gold), var(--copper));
-  border-radius: 6px;
-  font-weight: 900;
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.brand:hover .brand-mark {
-  box-shadow: 0 12px 24px rgba(213, 164, 95, 0.2);
-  transform: translateY(-1px);
-}
-
 .brand strong {
   display: block;
-  font-size: clamp(0.88rem, 1.4vw, 0.98rem);
+  font-size: clamp(0.82rem, 1.2vw, 0.92rem);
   line-height: 1.1;
 }
 
@@ -115,7 +97,7 @@ svg {
   display: block;
   margin-top: 2px;
   color: rgba(255, 255, 255, 0.68);
-  font-size: 0.7rem;
+  font-size: 0.64rem;
 }
 
 .site-nav {
@@ -125,9 +107,9 @@ svg {
 }
 
 .site-nav a {
-  padding: 8px 10px;
+  padding: 5px 7px;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 700;
   border-radius: 6px;
 }
@@ -157,8 +139,8 @@ svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 42px;
-  padding: 10px 15px;
+  min-height: 38px;
+  padding: 8px 13px;
   border-radius: 6px;
   font-weight: 850;
   line-height: 1.1;
@@ -167,8 +149,11 @@ svg {
 }
 
 .header-call {
+  min-height: 32px;
+  padding: 6px 11px;
   color: var(--deep);
   background: var(--gold);
+  font-size: 0.82rem;
   box-shadow: 0 10px 28px rgba(213, 164, 95, 0.24);
 }
 
@@ -181,8 +166,8 @@ svg {
 
 .nav-toggle {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 6px;
   color: var(--white);
@@ -198,7 +183,7 @@ svg {
 }
 
 .section {
-  padding: clamp(46px, 6vw, 78px) clamp(18px, 4vw, 42px);
+  padding: clamp(32px, 4.5vw, 56px) clamp(18px, 4vw, 36px);
 }
 
 .section-dark {
@@ -213,7 +198,7 @@ svg {
   position: relative;
   overflow: hidden;
   min-height: auto;
-  padding: clamp(54px, 7vw, 88px) clamp(18px, 4vw, 42px) clamp(34px, 5vw, 58px);
+  padding: clamp(38px, 5vw, 58px) clamp(18px, 4vw, 36px) clamp(32px, 4vw, 48px);
 }
 
 .hero::before {
@@ -230,8 +215,8 @@ svg {
 
 .hero::after {
   position: absolute;
-  inset: auto -12% -30% 40%;
-  height: 420px;
+  inset: auto -12% -45% 42%;
+  height: 260px;
   pointer-events: none;
   content: "";
   background:
@@ -264,9 +249,9 @@ svg {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.78fr);
+  grid-template-columns: minmax(0, 1.02fr) minmax(300px, 0.58fr);
   align-items: center;
-  gap: clamp(32px, 5vw, 56px);
+  gap: clamp(24px, 4vw, 42px);
 }
 
 .hero-copy {
@@ -276,7 +261,7 @@ svg {
 .eyebrow {
   margin: 0 0 10px;
   color: var(--gold);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -298,27 +283,28 @@ h3 {
 
 h1 {
   max-width: 870px;
-  margin-bottom: 16px;
-  font-size: clamp(2.2rem, 4.7vw, 4.25rem);
-  font-weight: 950;
+  max-width: 720px;
+  margin-bottom: 12px;
+  font-size: clamp(1.95rem, 3.8vw, 3.25rem);
+  font-weight: 880;
 }
 
 h2 {
-  margin-bottom: 14px;
-  font-size: clamp(1.55rem, 3vw, 2.45rem);
-  font-weight: 920;
+  margin-bottom: 10px;
+  font-size: clamp(1.28rem, 2.1vw, 1.85rem);
+  font-weight: 820;
 }
 
 h3 {
   margin-bottom: 8px;
-  font-size: 1rem;
+  font-size: 0.96rem;
 }
 
 .hero-subhead {
   max-width: 720px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   color: rgba(255, 255, 255, 0.78);
-  font-size: clamp(1rem, 1.6vw, 1.16rem);
+  font-size: clamp(0.96rem, 1.2vw, 1.05rem);
 }
 
 .hero-actions {
@@ -384,8 +370,8 @@ h3 {
 
 .hero-visual {
   position: relative;
-  min-height: 430px;
-  padding: clamp(16px, 2.5vw, 22px);
+  min-height: auto;
+  padding: 20px;
   overflow: hidden;
   background:
     radial-gradient(circle at 82% 12%, rgba(213, 164, 95, 0.2), transparent 14rem),
@@ -393,7 +379,7 @@ h3 {
     linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.22);
 }
 
 .hero-visual::before {
@@ -412,6 +398,66 @@ h3 {
   height: 290px;
   content: "";
   border: 34px solid rgba(213, 164, 95, 0.16);
+  border-radius: 999px;
+}
+
+.hero-summary {
+  display: grid;
+  gap: 14px;
+  align-self: center;
+  background: rgba(255, 255, 255, 0.065);
+  box-shadow: none;
+}
+
+.hero-summary::before,
+.hero-summary::after {
+  display: none;
+}
+
+.summary-line {
+  display: grid;
+  gap: 4px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.summary-line span {
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.summary-line strong,
+.summary-line a {
+  color: var(--white);
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.summary-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.summary-list li {
+  position: relative;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+}
+
+.summary-list li::before {
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  content: "";
+  background: var(--gold);
   border-radius: 999px;
 }
 
@@ -649,7 +695,7 @@ h3 {
 .page-hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(54px, 7vw, 88px) clamp(18px, 4vw, 42px);
+  padding: clamp(38px, 5vw, 64px) clamp(18px, 4vw, 36px);
 }
 
 .page-hero::before {
@@ -671,24 +717,24 @@ h3 {
 
 .page-hero h1 {
   max-width: 920px;
-  font-size: clamp(2.05rem, 4.5vw, 3.75rem);
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
 }
 
 .page-hero p:not(.eyebrow) {
   max-width: 780px;
   color: rgba(255, 255, 255, 0.78);
-  font-size: clamp(1rem, 1.6vw, 1.14rem);
+  font-size: clamp(0.96rem, 1.2vw, 1.05rem);
 }
 
 .section-heading {
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 }
 
 .section-heading::after {
   display: block;
-  width: 62px;
-  height: 3px;
-  margin-top: 16px;
+  width: 46px;
+  height: 2px;
+  margin-top: 12px;
   content: "";
   background: linear-gradient(90deg, var(--gold), var(--copper));
   border-radius: 999px;
@@ -701,7 +747,7 @@ h3 {
 .section-heading p {
   max-width: 720px;
   color: var(--steel);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .section-heading.compact {
@@ -725,15 +771,15 @@ h3 {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  gap: 12px;
 }
 
 .service-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 260px;
-  padding: 20px;
+  min-height: 0;
+  padding: 16px;
   overflow: hidden;
   background: var(--white);
   border: 1px solid rgba(17, 24, 39, 0.08);
@@ -764,9 +810,9 @@ h3 {
 .card-icon {
   position: relative;
   display: inline-block;
-  width: 36px;
-  height: 36px;
-  margin-bottom: 20px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 14px;
   background: #ead4b8;
   border-radius: 6px;
 }
@@ -842,12 +888,13 @@ h3 {
 }
 
 .service-card p {
-  margin-bottom: 14px;
+  margin-bottom: 0;
   color: var(--steel);
+  font-size: 0.92rem;
 }
 
 .service-card h3 {
-  min-height: 2.36em;
+  min-height: 0;
 }
 
 .card-examples {
@@ -887,13 +934,13 @@ h3 {
 .content-section .split-layout > div:first-child p:not(.eyebrow) {
   max-width: 640px;
   color: var(--steel);
-  font-size: 1.06rem;
+  font-size: 0.95rem;
 }
 
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .problem-grid article,
@@ -901,7 +948,7 @@ h3 {
 .depth-card {
   position: relative;
   overflow: hidden;
-  padding: 20px;
+  padding: 16px;
   background: var(--white);
   border: 1px solid rgba(17, 24, 39, 0.08);
   border-radius: var(--radius);
@@ -953,8 +1000,8 @@ h3 {
 
 .prep-item {
   position: relative;
-  min-height: 60px;
-  padding: 16px 16px 15px 44px;
+  min-height: 48px;
+  padding: 12px 14px 12px 36px;
   background: var(--white);
   border: 1px solid rgba(17, 24, 39, 0.08);
   border-radius: var(--radius);
@@ -964,10 +1011,10 @@ h3 {
 
 .prep-item::before {
   position: absolute;
-  top: 20px;
-  left: 18px;
-  width: 11px;
-  height: 11px;
+  top: 17px;
+  left: 16px;
+  width: 9px;
+  height: 9px;
   content: "";
   background: linear-gradient(135deg, var(--gold), var(--copper));
   border-radius: 4px;
@@ -980,7 +1027,7 @@ h3 {
 }
 
 .faq-card {
-  min-height: 170px;
+  min-height: 0;
 }
 
 .faq-card h3 {
@@ -1058,7 +1105,7 @@ h3 {
 }
 
 .why-section {
-  padding-block: clamp(48px, 7vw, 82px);
+  padding-block: clamp(32px, 4.5vw, 56px);
 }
 
 .why-layout {
@@ -1085,8 +1132,8 @@ h3 {
 }
 
 .trust-item {
-  min-height: 145px;
-  padding: 18px;
+  min-height: 0;
+  padding: 16px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.055));
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
@@ -1113,20 +1160,20 @@ h3 {
 .jobs-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr) minmax(340px, 1fr);
-  gap: clamp(24px, 5vw, 54px);
+  gap: clamp(18px, 4vw, 34px);
   align-items: start;
 }
 
 .job-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .job-item {
   position: relative;
-  min-height: 54px;
-  padding: 15px 16px 14px 44px;
+  min-height: 46px;
+  padding: 12px 14px 12px 36px;
   background: var(--white);
   border: 1px solid rgba(17, 24, 39, 0.08);
   border-radius: var(--radius);
@@ -1137,10 +1184,10 @@ h3 {
 
 .job-item::before {
   position: absolute;
-  top: 18px;
-  left: 18px;
-  width: 11px;
-  height: 11px;
+  top: 17px;
+  left: 16px;
+  width: 9px;
+  height: 9px;
   content: "";
   background: linear-gradient(135deg, var(--gold), var(--copper));
   border-radius: 4px;
@@ -1210,7 +1257,7 @@ h3 {
 }
 
 .contact-section {
-  padding-bottom: clamp(56px, 8vw, 92px);
+  padding-bottom: clamp(36px, 5vw, 64px);
   background:
     radial-gradient(circle at 12% 20%, rgba(182, 107, 61, 0.13), transparent 24rem),
     var(--paper);
@@ -1219,9 +1266,9 @@ h3 {
 .contact-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.54fr);
-  gap: clamp(24px, 4vw, 48px);
+  gap: clamp(18px, 4vw, 34px);
   align-items: stretch;
-  padding: clamp(24px, 4vw, 40px);
+  padding: clamp(20px, 3vw, 30px);
   color: var(--white);
   background:
     radial-gradient(circle at 88% 16%, rgba(213, 164, 95, 0.19), transparent 16rem),
@@ -1234,11 +1281,11 @@ h3 {
 .contact-copy p:not(.eyebrow) {
   max-width: 690px;
   color: rgba(255, 255, 255, 0.74);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .button-large {
-  min-height: 48px;
+  min-height: 42px;
   padding-inline: 20px;
   font-size: 0.96rem;
 }
@@ -1249,7 +1296,7 @@ h3 {
   justify-content: center;
   gap: 8px;
   margin: 0;
-  padding: 22px;
+  padding: 18px;
   color: var(--ink);
   background:
     linear-gradient(180deg, var(--paper), #fffaf3);
@@ -1259,7 +1306,7 @@ h3 {
 
 .contact-details strong {
   margin-bottom: 8px;
-  font-size: 1.12rem;
+  font-size: 1rem;
 }
 
 .contact-details a {
@@ -1282,7 +1329,7 @@ h3 {
 
 .text-panel {
   position: relative;
-  padding: clamp(20px, 3vw, 28px);
+  padding: clamp(16px, 2.5vw, 22px);
   overflow: hidden;
   background: var(--white);
   border: 1px solid rgba(17, 24, 39, 0.08);
@@ -1292,7 +1339,7 @@ h3 {
 
 .text-panel p {
   color: var(--steel);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .text-panel p:last-child {
@@ -1307,8 +1354,8 @@ h3 {
 
 .mini-card {
   position: relative;
-  min-height: 150px;
-  padding: 20px;
+  min-height: 0;
+  padding: 16px;
   overflow: hidden;
   background: var(--white);
   border: 1px solid rgba(17, 24, 39, 0.08);
@@ -1349,7 +1396,7 @@ h3 {
 }
 
 .values-section {
-  padding-block: clamp(48px, 7vw, 82px);
+  padding-block: clamp(32px, 4.5vw, 56px);
 }
 
 .value-grid {
@@ -1359,8 +1406,8 @@ h3 {
 }
 
 .value-card {
-  min-height: 165px;
-  padding: 20px;
+  min-height: 0;
+  padding: 16px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.055));
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
@@ -1399,8 +1446,8 @@ h3 {
 
 .contact-method-card {
   position: relative;
-  min-height: 210px;
-  padding: clamp(20px, 3vw, 28px);
+  min-height: 0;
+  padding: clamp(16px, 2.5vw, 22px);
   overflow: hidden;
   background: var(--white);
   border: 1px solid rgba(17, 24, 39, 0.08);
@@ -1435,7 +1482,7 @@ h3 {
 
 .contact-method-card h2 {
   overflow-wrap: anywhere;
-  font-size: clamp(1.25rem, 2.4vw, 1.9rem);
+  font-size: clamp(1.12rem, 1.8vw, 1.45rem);
 }
 
 .contact-method-card p {
@@ -1460,19 +1507,19 @@ h3 {
 .quote-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.62fr) minmax(390px, 1fr);
-  gap: clamp(24px, 5vw, 56px);
+  gap: clamp(18px, 4vw, 34px);
   align-items: start;
 }
 
 .quote-layout > div > p {
   max-width: 560px;
   color: var(--steel);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .prefer-call-card {
-  margin-top: 22px;
-  padding: 20px;
+  margin-top: 18px;
+  padding: 16px;
   color: var(--white);
   background:
     linear-gradient(135deg, rgba(213, 164, 95, 0.15), transparent 44%),
@@ -1493,7 +1540,7 @@ h3 {
 
 .quote-form {
   position: relative;
-  padding: clamp(20px, 3vw, 28px);
+  padding: clamp(16px, 2.5vw, 22px);
   overflow: hidden;
   background: var(--white);
   border: 1px solid rgba(17, 24, 39, 0.08);
@@ -1522,8 +1569,8 @@ h3 {
 .quote-form select,
 .quote-form textarea {
   width: 100%;
-  min-height: 44px;
-  padding: 10px 12px;
+  min-height: 40px;
+  padding: 9px 11px;
   color: var(--ink);
   background: #fbfaf7;
   border: 1px solid rgba(17, 24, 39, 0.15);
@@ -1564,7 +1611,7 @@ h3 {
 }
 
 .site-footer {
-  padding: 24px 18px 78px;
+  padding: 20px 18px 72px;
   color: rgba(255, 255, 255, 0.7);
   background: var(--deep);
 }
@@ -1666,7 +1713,7 @@ h3 {
 
   .site-nav {
     position: fixed;
-    top: 65px;
+    top: 50px;
     right: 16px;
     left: 16px;
     display: grid;
@@ -1683,7 +1730,7 @@ h3 {
   }
 
   .site-nav a {
-    padding: 13px 14px;
+    padding: 12px 14px;
     border-radius: 6px;
   }
 
@@ -1722,7 +1769,7 @@ h3 {
   }
 
   .service-board {
-    min-height: 360px;
+    min-height: 0;
   }
 
   .trust-strip {
@@ -1768,33 +1815,27 @@ h3 {
   }
 
   .site-header {
-    padding: 10px 14px;
-  }
-
-  .brand-mark {
-    flex-basis: 36px;
-    width: 36px;
-    height: 36px;
+    padding: 7px 14px;
   }
 
   .brand strong {
-    font-size: 0.86rem;
+    font-size: 0.82rem;
   }
 
   .brand small {
-    font-size: 0.68rem;
+    font-size: 0.62rem;
   }
 
   .hero {
-    padding-top: 42px;
+    padding-top: 32px;
   }
 
   h1 {
-    font-size: clamp(1.95rem, 11vw, 3rem);
+    font-size: clamp(1.7rem, 8.5vw, 2.35rem);
   }
 
   h2 {
-    font-size: clamp(1.45rem, 7vw, 2.1rem);
+    font-size: clamp(1.18rem, 5.8vw, 1.6rem);
   }
 
   .hero-actions,
@@ -1808,7 +1849,11 @@ h3 {
 
   .hero-visual {
     min-height: auto;
-    padding: 14px;
+    padding: 16px;
+  }
+
+  .hero-summary {
+    display: none;
   }
 
   .hero-visual::before {
@@ -1835,13 +1880,13 @@ h3 {
 
   .service-board {
     min-height: 0;
-    padding: 18px;
+    padding: 16px;
   }
 
   .board-main {
     grid-template-columns: 58px minmax(0, 1fr);
     gap: 14px;
-    padding: 24px 0;
+    padding: 18px 0;
   }
 
   .board-icon {
@@ -1868,7 +1913,7 @@ h3 {
 
   .process-card {
     min-height: auto;
-    padding: 18px;
+    padding: 16px;
   }
 
   .process-card span {
@@ -1883,20 +1928,20 @@ h3 {
   }
 
   .service-card {
-    padding: 18px;
+    padding: 16px;
   }
 
   .area-card {
-    padding: 18px;
+    padding: 16px;
   }
 
   .contact-card {
-    padding: 18px;
+    padding: 16px;
   }
 
   .contact-method-card,
   .quote-form {
-    padding: 18px;
+    padding: 16px;
   }
 
   .form-grid {
