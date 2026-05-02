@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Modern Plumbing and Heating">
+  <rect width="64" height="64" rx="10" fill="#0f141c"/>
+  <rect x="8" y="8" width="48" height="48" rx="7" fill="#d5a45f"/>
+  <path d="M18 42V22h5.8l8.2 10.9L40.2 22H46v20h-6.1V31.7l-6.1 8h-3.6l-6.1-8V42H18Z" fill="#141922"/>
+</svg>
